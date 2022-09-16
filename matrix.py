@@ -47,6 +47,9 @@ class Matrix:
     def compare(self, other):
         return self.sum() < other.sum()
 
+    def write_two_dim_array_to(self, stream):
+        pass
+
 
 class TwoDimArray(Matrix):
     def __init__(self):
@@ -87,6 +90,9 @@ class TwoDimArray(Matrix):
             stream.write('\tError matrix output type\n')
 
         super().write_to(stream)
+
+    def write_two_dim_array_to(self, stream):
+        self.write_to(stream)
 
 
 class Diagonal(Matrix):
